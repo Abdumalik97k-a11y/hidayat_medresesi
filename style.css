@@ -1,0 +1,470 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --primary-gold: #d4af37;
+    --gold-hover: #f3e5ab;
+    --dark-emerald: #0b2518;
+    --soft-cream: #fcfaf2;
+    --card-bg: rgba(255, 255, 255, 0.92);
+    --glass-border: rgba(212, 175, 55, 0.35);
+    --text-main: #1d2a23;
+}
+
+body {
+    background-color: var(--soft-cream);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+/* Навигация тилкеси */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 6%;
+    background: rgba(11, 37, 24, 0.96);
+    backdrop-filter: blur(12px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo h2 {
+    color: var(--primary-gold);
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #fff;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-gold);
+}
+
+.btn-primary {
+    background: var(--primary-gold);
+    padding: 8px 18px;
+    border-radius: 20px;
+    color: var(--dark-emerald) !important;
+    font-weight: 700;
+}
+
+/* Башкы бет (Hero Section) */
+.hero {
+    position: relative;
+    min-height: 92vh;
+    background: url('https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?q=80&w=1600') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 110px 20px 60px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(11, 37, 24, 0.92), rgba(11, 37, 24, 0.88));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    color: #fff;
+}
+
+.arabic-quote {
+    font-family: 'Amiri', serif;
+    font-size: 42px;
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+.hadith-text {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.hadith-source {
+    font-size: 13px;
+    opacity: 0.85;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.hero-philosophy {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.4);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.hero-philosophy p {
+    font-size: 18px;
+    color: var(--primary-gold);
+    margin-bottom: 5px;
+}
+
+.hero-philosophy span {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.hero-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-gold {
+    background: linear-gradient(135deg, #d4af37, #f3e5ab);
+    color: var(--dark-emerald);
+    padding: 12px 28px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+    transition: 0.3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-outline {
+    border: 2px solid var(--primary-gold);
+    color: #fff;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.btn-gold:hover, .btn-outline:hover {
+    transform: translateY(-3px);
+}
+
+/* Glassmorphism Карточкалар */
+.glass-card {
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.section {
+    padding: 80px 8%;
+}
+
+.bg-light {
+    background-color: #f3efe3;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    color: var(--dark-emerald);
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-gold);
+    margin: 8px auto 0;
+}
+
+.section-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* About Grid */
+.about-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+}
+
+.medrese-img-container {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 2px solid var(--primary-gold);
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+.medrese-photo {
+    width: 100%;
+    max-height: 380px;
+    object-fit: cover;
+    display: block;
+}
+
+.img-caption {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    padding: 8px;
+    background: #fff;
+    color: #666;
+}
+
+.aqida-badge {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: rgba(11, 37, 24, 0.05);
+    border-left: 4px solid var(--primary-gold);
+    padding: 15px;
+    border-radius: 0 10px 10px 0;
+    margin-top: 20px;
+}
+
+.aqida-badge i {
+    font-size: 28px;
+    color: var(--primary-gold);
+}
+
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-box {
+    text-align: center;
+}
+
+.stat-box i {
+    font-size: 30px;
+    color: var(--primary-gold);
+    margin-bottom: 8px;
+}
+
+/* Program Cards */
+.program-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.p-card {
+    text-align: center;
+    position: relative;
+    transition: 0.3s;
+}
+
+.p-card:hover {
+    transform: translateY(-5px);
+}
+
+.p-icon i {
+    font-size: 35px;
+    color: var(--dark-emerald);
+    margin-bottom: 10px;
+}
+
+.p-card.highlight {
+    border: 2px solid var(--primary-gold);
+}
+
+.p-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--primary-gold);
+    color: var(--dark-emerald);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+.duration {
+    display: inline-block;
+    background: var(--dark-emerald);
+    color: var(--primary-gold);
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin: 12px 0;
+    font-weight: 600;
+}
+
+/* Admission Steps */
+.admission-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.step-num {
+    background: var(--primary-gold);
+    color: var(--dark-emerald);
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+/* Facilities & Courses */
+.facilities-grid, .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.f-item, .course-box {
+    text-align: center;
+}
+
+.f-item i, .course-box i {
+    font-size: 32px;
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+}
+
+/* Footer / Байланышуу */
+.footer {
+    background: var(--dark-emerald);
+    color: #fff;
+    padding: 50px 8% 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-info p {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.footer-info i {
+    color: var(--primary-gold);
+    margin-right: 8px;
+}
+
+.phones {
+    list-style: none;
+    margin-top: 5px;
+}
+
+.phones li {
+    margin-bottom: 5px;
+}
+
+.phones a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.phones a:hover {
+    color: var(--primary-gold);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    background: var(--primary-gold);
+    color: var(--dark-emerald);
+}
+
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+/* Мобилдик телефондорго ылайыкташтыруу */
+@media (max-width: 768px) {
+    .about-grid { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+    .arabic-quote { font-size: 30px; }
+    .hadith-text { font-size: 20px; }
+    .hero { padding-top: 120px; }
+}
